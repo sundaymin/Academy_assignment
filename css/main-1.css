@@ -1,0 +1,233 @@
+/*
+파일명: main-1.css
+작성자: 박성민
+작성일: 2022.11.10~11.16
+기능: 모바일 해상도(max-width:768px) 스타일시트 적용
+*/
+@charset "UTF-8";
+
+@charset "UTF-8";
+/*reset*/
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,
+textarea,button,select{margin:0;padding:0}
+img,fieldset{border:0}
+ul,ol{list-style:none}
+em,address{font-style:normal}
+a{text-decoration:none}
+a:hover,a:active,a:focus{text-decoration:none}
+
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    font-family: 'NanumSquareNeo-Variable';
+    color:black;
+}
+
+#container {
+    width:100%; margin:0 auto;
+    position:relative;
+    padding-top: 100px;
+}
+/*모바일 상단메뉴*/
+h1 {
+    text-align: center;
+    padding-top: 45px;
+}
+.gnb {
+    position:absolute;
+    text-align: center;
+    width:100%; height:20px;
+    right:0px;
+    top:100px;
+    z-index: 100;
+}
+.gnb li {
+    display:inline;
+    float: right;
+    margin-right: 15px;
+}
+.gnb li > a {
+    font-size: 15px;
+    font-weight: 600;
+    color:black;
+}
+/*모바일 1레벨 메뉴*/
+.mainbar > li {
+    float:left;
+    position:relative;
+    display:block;
+    width:20%;
+    top:70px;
+    text-align: center;
+    background:#A38D80;
+    z-index: 99;
+}
+.mainbar >li > a {
+    display:block;
+    font-size: 18px;
+    font-weight: 530;
+    padding:15px;
+    color:#ffffff;
+}
+.mainbar >li:hover > a {
+    background-color: #beaca1c3;
+    color:black;
+    font-weight: 600;
+    font-size:18px;
+    transform: translate(0, -2%);
+    border-radius:5px;
+    z-index:99;
+}
+.mainbar ul {
+    position:absolute;
+    display:none;
+    z-index: 70;
+    width:100%;
+}
+/*2레벨 메뉴*/
+.mainbar2 li {
+    position:relative;
+    display:block;
+    width:96%; 
+   /* border:1px solid #A38D80;*/
+    padding:8px;
+    font-size:18px;
+    text-align:left;
+    z-index: 99;
+}
+.mainbar2 li > a {
+    font-family: 'NanumSquareNeo-Variable'; 
+}
+.mainbar li:hover > ul {
+    position:absolute;
+    display:block;
+    background-color: #ffffff;
+    top:50px;
+}
+.mainbar2 li:hover {
+    font-size:20px;
+    background-color: #beaca1c3;
+}
+.at_new {
+    top:800px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.at_new > h3 {
+    margin-top: -30px;
+    padding-top:20px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-size:25px;
+}
+.at_best {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.at_best > h3 {
+    margin-top: -30px;
+    padding-top:0px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-size:25px;
+}
+.at_review {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.at_review table td {
+    display: inline;
+    position: relative;
+    left:20px;
+    padding:5px;   
+}
+.at_review table td img {
+    display: inline;
+    width: 445px;
+}
+.at_review table td h4 {
+    font-size: 20px;
+}
+.at_review table td h5 {
+    font-size: 16px;
+    padding-bottom: 28px;
+}
+
+.at_review > h3 {
+    margin-top: -30px;
+    padding-top:0px;
+    padding-bottom: 60px;
+    text-align: center;
+    font-size:25px;
+}
+.ad {
+    display:flex;
+    justify-content:space-evenly;
+    padding:20px;
+    margin:20px;
+}
+.ad img:hover {
+    transform:scale(0.9);
+}
+.at_ad > h3 {
+    top:50px;
+    text-align: center;
+    padding-top: 25px;
+    font-size:25px;
+}
+.goods {
+    position: relative;
+    display: inline-block;
+    overflow:hidden;
+}
+.goods figure {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.goods figure > figcaption {
+    font-size: 15px;
+    font-weight: 600;
+}
+.goods img:hover {
+    transform:scale(1.1);
+}
+.price {
+    position: relative;
+    display:inline;
+    margin-left:20px;
+}
+.sale {
+    position: absolute;
+    float:left;
+    font-size: 17px;
+    font-weight: 800;
+    color:rgb(233, 23, 89);
+    left:210px;
+    
+}
+.won {
+    display:inline;
+    font-size: 17px;
+    font-weight: 800;
+    left:10px;
+}
+.at_ad {
+    background-color: rgb(205, 201, 187);
+}
+.ad {
+    display:flex;
+    justify-content:space-around;
+    padding:50px;
+}
+.ad img {
+    background-color: whitesmoke;
+    border-radius:40px;
+}
+.ft_customer {
+    font-weight: bold;
+    font-size: 18.5px;
+}

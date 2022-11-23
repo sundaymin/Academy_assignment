@@ -1,0 +1,161 @@
+/*
+파일명: common.css
+작성자: 박성민
+작성일: 2022.11.10~11.16
+기능: 공통영역 스타일시트 적용
+*/
+@charset "UTF-8";
+/*reset*/
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,
+textarea,button,select{margin:0;padding:0}
+img,fieldset{border:0}
+ul,ol{list-style:none}
+em,address{font-style:normal}
+a{text-decoration:none}
+a:hover,a:active,a:focus{text-decoration:none}
+
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    font-family: 'NanumSquareNeo-Variable';
+    color:black;
+}
+#wrap {
+    float:left;
+    width:100%;
+    background-color: white;
+}
+h1 {
+    font-size: 32px;
+    font-weight: 800;
+    position: relative;
+    text-align: center;
+    padding:5px; margin:10px;
+    top:27px;
+    z-index:5;
+}
+h3 {
+    position: relative;
+    font-size: 27px;
+    text-align: center; 
+    padding:15px; margin:10px;
+}
+/*상단 영역*/
+.gnb {
+    position:absolute;
+    text-align: center;
+    width:1400px; height:30px;
+    right:200px;
+    top:90px;
+    z-index: 100;
+}
+.gnb li {
+    display:inline;
+    float: right;
+    margin-right: 15px;
+}
+.gnb li > a {
+    font-size: 15px;
+    font-weight: 600;
+    color:black;
+}
+/*1레벨 메뉴*/
+.mainbar > li {
+    float:left;
+    position:relative;
+    display:block;
+    width:20%;
+    top:60px;
+    text-align: center;
+    background:#A38D80;
+    z-index: 99;
+}
+.mainbar >li > a {
+    display:block;
+    font-size: 18px;
+    font-weight: 530;
+    padding:15px;
+    color:#ffffff;
+}
+.mainbar >li:hover > a {
+    background-color: #beaca1c3;
+    color:black;
+    font-weight: 600;
+    font-size:18px;
+    transform: translate(0, -2%);
+    border-radius:5px;
+    z-index:99;
+}
+.mainbar ul {
+    position:absolute;
+    display:none;
+    z-index: 70;
+    width:100%;
+}
+/*2레벨 메뉴*/
+.mainbar2 li {
+    position:relative;
+    display:block;
+    width:96%; 
+   /* border:1px solid #A38D80;*/
+    padding:8px;
+    font-size:18px;
+    text-align:left;
+    z-index: 99;
+}
+.mainbar2 li > a {
+    font-family: 'NanumSquareNeo-Variable'; 
+}
+.mainbar li:hover > ul {
+    position:absolute;
+    display:block;
+    background-color: #ffffff;
+    top:50px;
+}
+.mainbar2 li:hover {
+    font-size:20px;
+    background-color: #beaca1c3;
+}
+/*본문 영역*/
+/*.at_new {
+    position:relative;
+    display:flex;
+    justify-content:space-around;
+    top:30px;
+    margin:30px;
+    padding:40px
+    
+}
+.at_best {
+    display:flex;
+    justify-content:space-around;
+    top:20px;
+    margin:20px;
+    padding:40px;
+}*/
+/*footer 영역*/
+#ft {
+    position: relative;
+    display: block;
+    margin-top: 100px;
+}
+.ft_left {
+    position: relative;
+    float:left;
+    padding: 20px;
+}
+.ft_right {
+    position: relative;
+    float:right;
+    padding: 20px;
+    top:-10px;
+}
+.ft_customer {
+    font-weight: bold;
+    font-size: 18.5px;
+}
